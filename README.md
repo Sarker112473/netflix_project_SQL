@@ -9,3 +9,33 @@ The project utilizes the `netflix_dataset.csv` file, which contains comprehensiv
 
 Dataset Link: <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank">Movies Dataset</a>
 
+
+
+
+## 🛠️ Database Setup & Schema
+
+To begin the analysis, the dataset was imported into an SQL database. The following SQL script was used to drop any existing table, create the structured `netflix` table with appropriate data types, and verify the data import:
+
+```sql
+-- Drop the table if it already exists
+DROP TABLE IF EXISTS netflix;
+
+-- Create the table structure
+CREATE TABLE netflix
+(
+    show_id      VARCHAR(5),
+    ty           VARCHAR(10),
+    title        VARCHAR(250),
+    director     VARCHAR(550),
+    casts        VARCHAR(1050),
+    country      VARCHAR(550),
+    date_added   VARCHAR(55),
+    release_year INT,
+    rating       VARCHAR(15),
+    duration     VARCHAR(15),
+    listed_in    VARCHAR(250),
+    description  VARCHAR(550)
+);
+
+-- Verify the data import
+SELECT * FROM netflix;

@@ -39,3 +39,32 @@ CREATE TABLE netflix
 
 -- Verify the data import
 SELECT * FROM netflix;
+
+
+
+## 🧠 15 Business Problems & Solutions
+
+This section contains the core business questions explored in this project, along with the corresponding SQL queries implemented to solve them.
+
+### 1. Count the number of Movies vs TV Shows
+<details>
+<summary>Click to view SQL Query</summary>
+
+```sql
+SELECT 
+    type, 
+    COUNT(*) AS total_count
+FROM netflix
+GROUP BY type 
+ORDER BY total_count;
+
+
+
+
+
+
+
+
+
+
+
